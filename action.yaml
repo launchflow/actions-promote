@@ -28,7 +28,7 @@ runs:
         python3 $GITHUB_ACTION_PATH/action/main.py
       env:
         INPUT_FROM_ENVIRONMENT: ${{ inputs.from_environment_name }}
-        INPUT_TO_ENVIRONMENT: ${{ to_environment_name.project_id }}
+        INPUT_TO_ENVIRONMENT: ${{ inputs.to_environment_name }}
         INPUT_PROJECT_ID: ${{ inputs.project_id }}
         INPUT_DKEY: ${{ inputs.deployment_key }}
         INPUT_WORKING_DIR: ${{ inputs.working_dir }}
