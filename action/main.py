@@ -9,7 +9,6 @@ FROM_ENVIRONMENT = os.environ["INPUT_FROM_ENVIRONMENT"]
 TO_ENVIRONMENT = os.environ["INPUT_TO_ENVIRONMENT"]
 PROJECT = os.environ["INPUT_PROJECT_ID"]
 DKEY = os.environ["INPUT_DKEY"]
-WORKING_DIR = os.environ["INPUT_WORKING_DIR"]
 
 version_specifier = ""
 if VERSION != "":
@@ -25,7 +24,7 @@ check_call(cmd, shell=True)
 cmd = "launch config set-server-address https://dev.apis.launchflow.com"
 check_call(cmd, shell=True)
 cmd = (
-    "launch deployments promte-environment "
+    "launch deployments promote-environment "
     f"-t={TO_ENVIRONMENT} -f=INPUT_TO_ENVIRONMENT --project-id={PROJECT} --dkey={DKEY}"
 )
-check_call(cmd, shell=True, cwd=WORKING_DIR)
+check_call(cmd, shell=True)

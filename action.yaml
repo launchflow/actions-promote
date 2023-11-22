@@ -31,5 +31,4 @@ runs:
         INPUT_TO_ENVIRONMENT: ${{ inputs.to_environment_name }}
         INPUT_PROJECT_ID: ${{ inputs.project_id }}
         INPUT_DKEY: ${{ inputs.deployment_key }}
-        INPUT_WORKING_DIR: ${{ inputs.working_dir }}
       shell: bash
