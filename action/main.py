@@ -21,7 +21,6 @@ req = f"ruff{version_specifier}"
 
 cmd = "pip install launchflow"
 check_call(cmd, shell=True)
-check_call(cmd, shell=True)
 cmd = (
     "launch deployments promote-environment "
     f"-t {TO_ENVIRONMENT} -f {FROM_ENVIRONMENT} --project-id={PROJECT} --dkey={DKEY}"
