@@ -25,6 +25,6 @@ cmd = "launch config set-server-address https://dev.apis.launchflow.com"
 check_call(cmd, shell=True)
 cmd = (
     "launch deployments promote-environment "
-    f"-t={TO_ENVIRONMENT} -f={FROM_ENVIRONMENT} --project-id={PROJECT} --dkey={DKEY}"
+    f"-t {TO_ENVIRONMENT} -f {FROM_ENVIRONMENT} --project-id={PROJECT} --dkey={DKEY}"
 )
 check_call(cmd, shell=True)
