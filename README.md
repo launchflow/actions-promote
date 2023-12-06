@@ -51,3 +51,4 @@ jobs:
 | from_environment_name | The environment in the project that you are promoting from (from -> to). This should match the name you provided when you created your environment (e.g. `dev`)     |
 | to_environment_name   | The environment in the project that you are promoting to (from -> to). This should match the name you provided when you created your environment (e.g.  `prod` )    |
 | deployment_key        | The LaunchFlow deployment key of the environment you are promoting **to** use for authentication. This key is initially generated when you create your environment. |
+| launchflow_cli_version        | The version of the LaunchFlow CLI to use. Defaults to the latest version. |
