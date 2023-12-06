@@ -1,7 +1,5 @@
 """GitHub Action for LaunchFlow Promot."""
 import os
-import re
-import sys
 from subprocess import check_call
 
 VERSION = os.getenv("INPUT_VERSION", default="")
