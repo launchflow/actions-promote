@@ -34,7 +34,7 @@ jobs:
           python-version: "3.10"
 
       - name: Promote to Prod
-        uses: launchflow/actions-promote@main
+        uses: launchflow/actions-promote@v1
         with:
           project_id: ${{ secrets.LAUNCHFLOW_PROJECT_ID }}
           from_environment_name: dev
