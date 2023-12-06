@@ -18,6 +18,10 @@ inputs:
     description: "The working directory to run the deploy from. Defaults to the root of the repository."
     required: false
     default: "."
+  launchflow_cli_version:
+    description: "The version of the LaunchFlow CLI to use. Defaults to the latest version."
+    required: false
+    default: ""
 branding:
   icon: "cloud"
   color: "purple"
@@ -31,4 +35,5 @@ runs:
         INPUT_TO_ENVIRONMENT: ${{ inputs.to_environment_name }}
         INPUT_PROJECT_ID: ${{ inputs.project_id }}
         INPUT_DKEY: ${{ inputs.deployment_key }}
+        INPUT_CLI_VERSION: ${{ inputs.launchflow_cli_version }}
       shell: bash

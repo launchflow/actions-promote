@@ -1,4 +1,4 @@
-"""GitHub Action for Ruff."""
+"""GitHub Action for LaunchFlow Promot."""
 import os
 import re
 import sys
@@ -9,15 +9,12 @@ FROM_ENVIRONMENT = os.environ["INPUT_FROM_ENVIRONMENT"]
 TO_ENVIRONMENT = os.environ["INPUT_TO_ENVIRONMENT"]
 PROJECT = os.environ["INPUT_PROJECT_ID"]
 DKEY = os.environ["INPUT_DKEY"]
+CLI_VERSION = os.getenv("INPUT_CLI_VERSION", None)
 
-version_specifier = ""
-if VERSION != "":
-    if not re.match(r"v?\d\.\d{1,3}\.\d{1,3}$", VERSION):
-        print("VERSION does not match expected pattern")
-        sys.exit(1)
-    version_specifier = f"=={VERSION}"
-
-req = f"ruff{version_specifier}"
+if CLI_VERSION is not None:
+    cmd = f"pip install launchflow=={CLI_VERSION}"
+else:
+    cmd = "pip install launchflow"
 
 cmd = "pip install launchflow"
 check_call(cmd, shell=True)
